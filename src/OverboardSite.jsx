@@ -313,8 +313,8 @@ export default function OverboardSite() {
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-3">
               <RoadmapItem done title="Core movement & camera" detail="Ship physics, camera follow, drift smoothing" />
-              <RoadmapItem done={false} title="Cannons & hit detection" detail="Damage model, cooldowns, impact VFX" />
-              <RoadmapItem done={false} title="Health, UI, sinking animation" detail="Death state and last‑man‑standing win" />
+              <RoadmapItem done title="Cannons & hit detection" detail="Damage model, cooldowns, impact VFX" />
+              <RoadmapItem done title="Health, UI, sinking animation" detail="Death state and last‑man‑standing win" />
               <RoadmapItem done title="Networking polish" detail="Lag compensation, spawn logic, lobby flow" />
             </div>
             <div className="space-y-3">
