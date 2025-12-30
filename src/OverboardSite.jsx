@@ -246,19 +246,15 @@ export default function OverboardSite() {
                   <Download className="h-6 w-6 text-sky-300" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Windows (x64)</h3>
-                  <p className="text-sm text-sky-200/80">ZIP or installer (.exe)</p>
+                  <h3 className="text-xl font-bold text-white">Windows</h3>
+                  <p className="text-sm text-sky-200/80">ZIP</p>
                 </div>
               </div>
               <div className="mt-4 flex flex-wrap gap-3">
-                <a href="/downloads/OVERBOARD-Windows.zip" download className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow ring-1 ring-white/10 hover:brightness-110">
+                <a href="/downloads/OVERBOARD_Windows.zip" download className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow ring-1 ring-white/10 hover:brightness-110">
                   <Download className="h-4 w-4" /> Download ZIP
                 </a>
-                <a href="/downloads/OVERBOARD-Setup.exe" download className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 font-semibold text-white ring-1 ring-white/20 hover:bg-white/20">
-                  <Download className="h-4 w-4" /> Installer (.exe)
-                </a>
               </div>
-              <p className="mt-3 text-xs text-sky-300/70">Checksum (SHA‑256): <span className="font-mono">— to be filled on release —</span></p>
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
@@ -267,19 +263,16 @@ export default function OverboardSite() {
                   <Download className="h-6 w-6 text-sky-300" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">macOS (Intel & Apple Silicon)</h3>
-                  <p className="text-sm text-sky-200/80">.dmg or .zip — notarize for Gatekeeper</p>
+                  <h3 className="text-xl font-bold text-white">macOS</h3>
+                  <p className="text-sm text-sky-200/80">ZIP — notarize for Gatekeeper</p>
                 </div>
               </div>
               <div className="mt-4 flex flex-wrap gap-3">
                 <a href="/downloads/OVERBOARD-mac.zip" download className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow ring-1 ring-white/10 hover:brightness-110">
                   <Download className="h-4 w-4" /> Download ZIP
                 </a>
-                <a href="/downloads/OVERBOARD.dmg" download className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 font-semibold text-white ring-1 ring-white/20 hover:bg-white/20">
-                  <Download className="h-4 w-4" /> Disk Image (.dmg)
-                </a>
               </div>
-              <p className="mt-3 text-xs text-sky-300/70">Checksum (SHA‑256): <span className="font-mono">— to be filled on release —</span></p>
+              
             </div>
           </div>
         </Container>
@@ -297,7 +290,7 @@ export default function OverboardSite() {
               <RequirementRow label="RAM" value="8 GB" />
               <RequirementRow label="GPU" value="GTX 960 / RX 560 / Apple M1 (integrated)" />
               <RequirementRow label="Storage" value="2 GB available" />
-              <RequirementRow label="Network" value="Broadband, stable ping" />
+              <RequirementRow label="File Size" value="120 MB" />
             </div>
             <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
               <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white"><Waves className="h-5 w-5 text-sky-300"/> Recommended</h3>
@@ -306,7 +299,7 @@ export default function OverboardSite() {
               <RequirementRow label="RAM" value="16 GB" />
               <RequirementRow label="GPU" value="GTX 1660 / RX 6600 / Apple M2" />
               <RequirementRow label="Storage" value="2 GB SSD space" />
-              <RequirementRow label="Network" value="Wired Ethernet recommended" />
+              <RequirementRow label="File Size" value="120 MB" />
             </div>
           </div>
         </Container>
