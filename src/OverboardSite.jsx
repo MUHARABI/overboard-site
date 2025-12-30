@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 
 import logo from "./assets/logo.png";
+import trailer from "./assets/trailer.mp4";
 
 // Container wrapper
 const Container = ({ children, className = "" }) => (
@@ -184,7 +185,12 @@ export default function OverboardSite() {
                 </div>
 
                 <div className="mt-6 aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-tr from-sky-900/40 to-slate-900/40">
-                  <video className="h-full w-full object-cover" src="/trailer.mp4" controls />
+                  <video
+                    className="h-full w-full object-cover"
+                    src={trailer}
+                    controls
+                    playsInline
+                  />
                 </div>
 
                 <div className="mt-6 grid gap-3 sm:grid-cols-3">
@@ -318,78 +324,109 @@ export default function OverboardSite() {
               <RoadmapItem done title="Networking polish" detail="Lag compensation, spawn logic, lobby flow" />
             </div>
             <div className="space-y-3">
-              <RoadmapItem done={false} title="Minimap" detail="Icon tracking" />
+              <RoadmapItem done title="Minimap" detail="main map" />
               <RoadmapItem done title="Audio & music" detail="SFX mix, volume sliders, theme loop" />
-              <RoadmapItem done={false} title="Build" detail="Windows/mac builds, smoke tests, crash logs" />
-              <RoadmapItem done={false} title="Release site and trailer" detail="All final preparations for launch" />
+              <RoadmapItem done title="Build" detail="Windows/mac builds, smoke tests, crash logs" />
+              <RoadmapItem done title="Release site and trailer" detail="All final preparations for launch" />
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Newsletter / CTA */}
-      <section id="join" className="relative py-16">
+      {/* Get to Know the Developer */}
+      <section id="developer" className="relative py-20">
         <Container>
-          <div className="overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-sky-900/30 via-slate-900/40 to-slate-950 p-8">
-            <div className="grid items-center gap-8 md:grid-cols-2">
-              
-              {/* LEFT SIDE */}
-              <div>
-                <h3 className="text-2xl font-bold text-white">Join the OVERBOARD crew</h3>
-                <p className="mt-2 text-sm text-sky-200/80">
-                  Get updates when new builds drop. (Form not wired yet.)
-                </p>
+          <SectionTitle
+            eyebrow="Behind the Helm"
+            title="Get to Know the Developer"
+            subtitle="OVERBOARD is an independent project built with a passion for multiplayer systems, gameplay feel, and clean design."
+          />
 
-                <form className="mt-4 flex flex-col gap-3 sm:flex-row">
-                  <input
-                    type="email"
-                    placeholder="user@gmail.com"
-                    className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-sky-300/60 outline-none focus:border-sky-300/40"
-                  />
-                  <button
-                    type="button"
-                    className="rounded-xl bg-sky-500 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/10 hover:brightness-110"
-                  >
-                    Notify me
-                  </button>
-                </form>
-              </div>
+          <div className="mx-auto max-w-3xl rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+            <p className="text-center text-sky-100/80 mb-6">
+              Hi, I’m Muhammed Arabi, an up and coming software engineer and game developer focused on building polished multiplayer experiences across platforms.
+            </p>
 
-              {/* RIGHT SIDE */}
-              <div className="grid gap-3 sm:grid-cols-2">
-                
-                {/* Community */}
-                <div className="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                  <p className="text-xs uppercase tracking-wide text-sky-300/70">Community</p>
-                  <div className="mt-2 flex flex-col gap-3">
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://muharabi.github.io/Website-Project/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white ring-1 ring-white/20 hover:bg-white/20"
+              >
+                <Anchor className="h-4 w-4" /> Website
+              </a>
 
-                    <a
-                      href="#"
-                      className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-3 py-2 text-sm font-medium text-white ring-1 ring-white/20 hover:bg-white/20"
-                    >
-                      <Github className="h-4 w-4" /> GitHub
-                    </a>
+              <a
+                href="https://github.com/MUHARABI"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white ring-1 ring-white/20 hover:bg-white/20"
+              >
+                <Github className="h-4 w-4" /> GitHub
+              </a>
 
-                    <a
-                      href="#"
-                      className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-3 py-2 text-sm font-medium text-white ring-1 ring-white/20 hover:bg-white/20"
-                    >
-                      <Instagram className="h-4 w-4" /> Instagram
-                    </a>
+              <a
+                href="https://www.instagram.com/muhammed_arabi10/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white ring-1 ring-white/20 hover:bg-white/20"
+              >
+                <Instagram className="h-4 w-4" /> Instagram
+              </a>
 
-                    <a
-                      href="#"
-                      className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-3 py-2 text-sm font-medium text-white ring-1 ring-white/20 hover:bg-white/20"
-                    >
-                      <Linkedin className="h-4 w-4" /> LinkedIn
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <a
+                href="https://www.linkedin.com/in/muhammed-arabi-b9659926b/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white ring-1 ring-white/20 hover:bg-white/20"
+              >
+                <Linkedin className="h-4 w-4" /> LinkedIn
+              </a>
             </div>
           </div>
         </Container>
       </section>
+
+      {/* Player Feedback */}
+      <section id="feedback" className="relative py-20">
+        <Container>
+          <SectionTitle
+            eyebrow="Community Voices"
+            title="Player Feedback"
+            subtitle="Share your experience with OVERBOARD. Your feedback helps shape future updates."
+          />
+
+          <div className="mx-auto max-w-2xl rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Your name (optional)"
+                className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-sky-300/60 outline-none focus:border-sky-300/40"
+              />
+
+              <textarea
+                rows="4"
+                placeholder="What did you think of the game?"
+                className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-sky-300/60 outline-none focus:border-sky-300/40 resize-none"
+              />
+
+              <button
+                type="button"
+                className="w-full rounded-xl bg-sky-500 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/10 hover:brightness-110"
+              >
+                Submit Feedback
+              </button>
+
+              <p className="text-center text-xs text-sky-300/60">
+                (Feedback storage can be wired to a backend later)
+              </p>
+            </form>
+          </div>
+        </Container>
+      </section>
+
+
 
 
       {/* Footer */}
@@ -403,7 +440,8 @@ export default function OverboardSite() {
             </div>
             <nav className="flex items-center gap-5 text-sm text-sky-200/70">
               <a className="hover:text-white" href="#download">Download</a>
-              <a className="hover:text-white" href="#join">Join</a>
+              <a className="hover:text-white" href="#developer">Developer</a>
+              <a className="hover:text-white" href="#feedback">Feedback</a>
               <a className="hover:text-white" href="#">Privacy</a>
               <a className="hover:text-white" href="#">Terms</a>
             </nav>
