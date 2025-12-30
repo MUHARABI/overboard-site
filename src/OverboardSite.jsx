@@ -146,13 +146,11 @@ export default function OverboardSite() {
                   <Download className="h-5 w-5" /> Download for Windows
                 </a>
 
-                <a
-                  href="/downloads/OVERBOARD-mac.zip"
-                  download
-                  className="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-5 py-3 font-semibold text-white ring-1 ring-white/20 backdrop-blur transition hover:bg-white/20"
-                >
-                  <Download className="h-5 w-5" /> Download for macOS
-                </a>
+               <div className="inline-flex items-center gap-2 rounded-2xl bg-white/5 px-5 py-3 font-semibold text-sky-200 ring-1 ring-white/10 cursor-not-allowed">
+                  <Download className="h-5 w-5 opacity-60" />
+                  macOS — Coming Jan 5
+                </div>
+
 
                 <a
                   href="#join"
