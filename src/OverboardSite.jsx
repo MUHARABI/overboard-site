@@ -139,7 +139,7 @@ export default function OverboardSite() {
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
-                  href="/downloads/OVERBOARD-Windows.zip"
+                  href="https://github.com/MUHARABI/overboard-site/releases/download/v1.0.0/OVERBOARD_Windows.zip"
                   download
                   className="inline-flex items-center gap-2 rounded-2xl bg-sky-500 px-5 py-3 font-semibold text-white shadow-lg shadow-sky-500/25 ring-1 ring-white/10 transition hover:brightness-110 active:scale-[0.99]"
                 >
@@ -251,7 +251,7 @@ export default function OverboardSite() {
                 </div>
               </div>
               <div className="mt-4 flex flex-wrap gap-3">
-                <a href="/downloads/OVERBOARD_Windows.zip" download className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow ring-1 ring-white/10 hover:brightness-110">
+                <a href="https://github.com/MUHARABI/overboard-site/releases/download/v1.0.0/OVERBOARD_Windows.zip" download className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow ring-1 ring-white/10 hover:brightness-110">
                   <Download className="h-4 w-4" /> Download ZIP
                 </a>
               </div>
