@@ -264,16 +264,21 @@ export default function OverboardSite() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white">macOS</h3>
-                  <p className="text-sm text-sky-200/80">ZIP — notarize for Gatekeeper</p>
+                  <p className="text-sm text-sky-200/80">ZIP — Gatekeeper compatible</p>
                 </div>
               </div>
-              <div className="mt-4 flex flex-wrap gap-3">
-                <a href="/downloads/OVERBOARD-mac.zip" download className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow ring-1 ring-white/10 hover:brightness-110">
-                  <Download className="h-4 w-4" /> Download ZIP
-                </a>
+
+              {/* Coming soon notice */}
+              <div className="mt-4 rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">
+                <p className="text-sm text-sky-200">
+                  macOS build coming <span className="font-semibold text-white">January 5th</span>.
+                </p>
+                <p className="mt-1 text-xs text-sky-300/70">
+                  Currently finalizing notarization and cross-platform testing.
+                </p>
               </div>
-              
             </div>
+
           </div>
         </Container>
       </section>
