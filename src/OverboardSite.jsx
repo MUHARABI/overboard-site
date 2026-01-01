@@ -281,28 +281,80 @@ export default function OverboardSite() {
         </Container>
       </section>
 
+            {/* How to Play After Download */}
+      <section className="relative py-20">
+        <Container>
+          <SectionTitle
+            eyebrow="Getting Started"
+            title="How to Play After Download"
+            subtitle="Follow the steps below to launch OVERBOARD on your system."
+          />
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            
+            {/* Windows Steps */}
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+              <h3 className="mb-4 text-xl font-bold text-white">Windows</h3>
+
+              <ol className="space-y-4 text-sm text-sky-100/80 list-decimal list-inside">
+                <li>Download the <span className="font-semibold text-white">OVERBOARD Windows</span> file.</li>
+                <li>Right-click the ZIP file and choose <span className="font-semibold text-white">Extract All</span>.</li>
+                <li>Open the extracted folder and double-click <span className="font-semibold text-white">OVERBOARD.exe</span>.</li>
+                <li>
+                  If Windows shows a security warning:
+                  <ul className="mt-2 ml-6 list-disc space-y-1">
+                    <li>Click <span className="font-semibold text-white">More info</span></li>
+                    <li>Select <span className="font-semibold text-white">Run anyway</span></li>
+                  </ul>
+                </li>
+                <li>Once launched, right-click the app icon and <span className="font-semibold text-white">Pin to taskbar</span> for easy access.</li>
+              </ol>
+            </div>
+
+            {/* macOS Steps */}
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+              <h3 className="mb-4 text-xl font-bold text-white">macOS</h3>
+
+              <ol className="space-y-4 text-sm text-sky-100/80 list-decimal list-inside">
+                <li>Download the <span className="font-semibold text-white">OVERBOARD macOS</span> file.</li>
+                <li>Unzip the ZIP file to extract the <span className="font-semibold text-white">OVERBOARD.app</span>.</li>
+                <li>Drag the app into your <span className="font-semibold text-white">Applications</span> folder.</li>
+                <li>
+                  On first launch, macOS may block the app:
+                  <ul className="mt-2 ml-6 list-disc space-y-1">
+                    <li>Open <span className="font-semibold text-white">System Settings → Privacy & Security</span></li>
+                    <li>Click <span className="font-semibold text-white">Open Anyway</span></li>
+                  </ul>
+                </li>
+                <li>Launch OVERBOARD again and start playing.</li>
+              </ol>
+            </div>
+
+          </div>
+        </Container>
+      </section>
+
+
       {/* Requirements */}
       <section className="relative py-16">
         <Container>
           <SectionTitle eyebrow="Can your ship handle it?" title="System requirements" />
           <div className="grid gap-6 lg:grid-cols-2">
             <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-              <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white"><Cpu className="h-5 w-5 text-sky-300"/> Minimum</h3>
-              <RequirementRow label="OS" value="Windows 10 64‑bit / macOS 12+" />
-              <RequirementRow label="CPU" value="Intel i5 / Ryzen 3 / Apple M1" />
-              <RequirementRow label="RAM" value="8 GB" />
+              <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white"><Cpu className="h-5 w-5 text-sky-300"/> Minimum</h3>    
+              <RequirementRow label="CPU" value="Intel i3 / Ryzen 3 / Apple M1" />
+              <RequirementRow label="RAM" value="4 GB" />
               <RequirementRow label="GPU" value="GTX 960 / RX 560 / Apple M1 (integrated)" />
               <RequirementRow label="Storage" value="2 GB available" />
-              <RequirementRow label="File Size" value="120 MB" />
+              <RequirementRow label="File Size" value="100 MB" />
             </div>
             <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
               <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white"><Waves className="h-5 w-5 text-sky-300"/> Recommended</h3>
-              <RequirementRow label="OS" value="Windows 11 64‑bit / macOS 13+" />
-              <RequirementRow label="CPU" value="Intel i7 / Ryzen 5 / Apple M2" />
-              <RequirementRow label="RAM" value="16 GB" />
+              <RequirementRow label="CPU" value="Intel i7 / Ryzen 7 / Apple M2" />
+              <RequirementRow label="RAM" value="8 GB" />
               <RequirementRow label="GPU" value="GTX 1660 / RX 6600 / Apple M2" />
               <RequirementRow label="Storage" value="2 GB SSD space" />
-              <RequirementRow label="File Size" value="120 MB" />
+              <RequirementRow label="File Size" value="100 MB" />
             </div>
           </div>
         </Container>
