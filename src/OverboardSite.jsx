@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Anchor,
@@ -22,6 +22,7 @@ import {
 
 import logo from "./assets/logo.png";
 import trailer from "./assets/trailer.mp4";
+
 
 // Container wrapper
 const Container = ({ children, className = "" }) => (
@@ -109,6 +110,9 @@ const RoadmapItem = ({ done, title, detail }) => (
 
 // MAIN EXPORT
 export default function OverboardSite() {
+  const [showTerms, setShowTerms] = useState(false);
+  const [downloadUrl, setDownloadUrl] = useState("");
+
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-transparent text-sky-100">
       <OceanBackdrop />
@@ -138,21 +142,26 @@ export default function OverboardSite() {
               </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a
-                  href="https://github.com/MUHARABI/overboard-site/releases/download/v1.0.0/OVERBOARD_Windows.zip"
-                  download
-                  className="inline-flex items-center gap-2 rounded-2xl bg-sky-500 px-5 py-3 font-semibold text-white shadow-lg shadow-sky-500/25 ring-1 ring-white/10 transition hover:brightness-110 active:scale-[0.99]"
+                <button
+                  onClick={() => {
+                    setDownloadUrl("https://github.com/MUHARABI/overboard-site/releases/download/v1.0.0/OVERBOARD_Windows.zip");
+                    setShowTerms(true);
+                  }}
+                  className="inline-flex items-center gap-2 rounded-2xl bg-sky-500 px-5 py-3 font-semibold text-white shadow-lg shadow-sky-500/25 ring-1 ring-white/10 hover:brightness-110"
                 >
                   <Download className="h-5 w-5" /> Download for Windows
-                </a>
+                </button>
 
-                <a
-                  href="https://github.com/MUHARABI/overboard-site/releases/download/v1.02/OVERBOARD.zip"
-                  download
-                  className="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-5 py-3 font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/20"
+                <button
+                  onClick={() => {
+                    setDownloadUrl("https://github.com/MUHARABI/overboard-site/releases/download/v1.02/OVERBOARD.zip");
+                    setShowTerms(true);
+                  }}
+                  className="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-5 py-3 font-semibold text-white ring-1 ring-white/20 hover:bg-white/20"
                 >
                   <Download className="h-5 w-5" /> Download for macOS
-                </a>
+                </button>
+
 
 
 
@@ -253,9 +262,16 @@ export default function OverboardSite() {
                 </div>
               </div>
               <div className="mt-4 flex flex-wrap gap-3">
-                <a href="https://github.com/MUHARABI/overboard-site/releases/download/v1.0.0/OVERBOARD_Windows.zip" download className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow ring-1 ring-white/10 hover:brightness-110">
-                  <Download className="h-4 w-4" /> Download ZIP
-                </a>
+                <button
+                  onClick={() => {
+                    setDownloadUrl("https://github.com/MUHARABI/overboard-site/releases/download/v1.0.0/OVERBOARD_Windows.zip");
+                    setShowTerms(true);
+                  }}
+                  className="inline-flex items-center gap-2 rounded-2xl bg-sky-500 px-5 py-3 font-semibold text-white shadow-lg shadow-sky-500/25 ring-1 ring-white/10 hover:brightness-110"
+                >
+                  <Download className="h-5 w-5" /> Download ZIP
+                </button>
+
               </div>
             </div>
 
@@ -272,13 +288,16 @@ export default function OverboardSite() {
 
               {/* Coming soon notice */}
               <div className="mt-4 flex flex-wrap gap-3">
-                <a
-                  href="https://github.com/MUHARABI/overboard-site/releases/download/v1.0.0/OVERBOARD_macOS.zip"
-                  download
-                  className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow ring-1 ring-white/10 hover:brightness-110"
+                <button
+                  onClick={() => {
+                    setDownloadUrl("https://github.com/MUHARABI/overboard-site/releases/download/v1.02/OVERBOARD.zip");
+                    setShowTerms(true);
+                  }}
+                  className="inline-flex items-center gap-2 rounded-2xl bg-sky-500 px-5 py-3 font-semibold text-white shadow-lg shadow-sky-500/25 ring-1 ring-white/10 hover:brightness-110"
                 >
-                  <Download className="h-4 w-4" /> Download ZIP
-                </a>
+                  <Download className="h-5 w-5" /> Download ZIP
+                </button>
+
               </div>
             </div>
 
@@ -501,6 +520,50 @@ export default function OverboardSite() {
           </div>
         </Container>
       </footer>
+
+      {showTerms && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur">
+          <div className="w-full max-w-2xl rounded-3xl bg-slate-900 p-8 ring-1 ring-white/10 shadow-2xl">
+            
+            <h3 className="text-3xl font-bold text-white mb-6">
+              Terms & Conditions
+            </h3>
+            <div className="text-base text-sky-100/90 space-y-4 max-h-[28rem] overflow-y-auto leading-relaxed">
+
+
+              <p>
+                OVERBOARD is provided “as is” without warranties of any kind.
+              </p>
+              <p>
+                By downloading, you acknowledge that the developer is not liable
+                for data loss, system issues, or damages resulting from use of the software.
+              </p>
+              <p>
+                This is an independently developed game and is not affiliated with any platform holders.
+              </p>
+            </div>
+            <div className="mt-8 flex justify-end gap-4">
+              <button
+                onClick={() => setShowTerms(false)}
+                className="rounded-xl bg-white/10 px-4 py-2 text-sm text-white ring-1 ring-white/20 hover:bg-white/20"
+              >
+                Cancel
+              </button>
+
+              <button
+                onClick={() => {
+                  window.location.href = downloadUrl;
+                  setShowTerms(false);
+                }}
+                className="rounded-xl bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:brightness-110"
+              >
+                I Agree & Download
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </main>
   );
 }
