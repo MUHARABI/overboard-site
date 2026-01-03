@@ -217,7 +217,7 @@ export default function OverboardSite() {
 
                   <div className="rounded-xl bg-white/5 p-3 ring-1 ring-white/10">
                     <p className="text-[11px] uppercase tracking-wide text-sky-300/70">Status</p>
-                    <p className="text-sm font-semibold text-white">In Development</p>
+                    <p className="text-sm font-semibold text-white">Early Access</p>
                   </div>
                 </div>
               </div>
@@ -232,7 +232,7 @@ export default function OverboardSite() {
           <SectionTitle
             eyebrow="What makes OVERBOARD fun?"
             title="Sink or be sunk"
-            subtitle="Arcade naval combat with tight controls, satisfying cannon fire, and dramatic last‑man‑standing finishes."
+            subtitle="Arcade naval combat with tight controls, satisfying cannon fire, and dramatic last man standing finishes."
           />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <Feature icon={Swords} title="Tactical Broadsides" text="Time your turns to unleash devastating broadsides while keeping your hull out of harms way." />
@@ -359,35 +359,54 @@ export default function OverboardSite() {
       </section>
 
 
-      {/* Requirements */}
+      {/* Compatibility */}
       <section className="relative py-16">
         <Container>
-          <SectionTitle eyebrow="Can your ship handle it?" title="System requirements" />
+          <SectionTitle
+            eyebrow="Easy to run"
+            title="Compatibility & Performance"
+            subtitle="OVERBOARD is built to be lightweight, accessible, and playable on a wide range of systems."
+          />
+
           <div className="grid gap-6 lg:grid-cols-2">
+            
+            {/* Compatibility */}
             <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-              <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white"><Cpu className="h-5 w-5 text-sky-300"/> Minimum</h3>    
-              <RequirementRow label="CPU" value="Intel i3 / Ryzen 3 / Apple M1" />
-              <RequirementRow label="RAM" value="4 GB" />
-              <RequirementRow label="GPU" value="GTX 960 / RX 560 / Apple M1 (integrated)" />
-              <RequirementRow label="Storage" value="2 GB available" />
-              <RequirementRow label="File Size" value="100 MB" />
+              <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
+                <Cpu className="h-5 w-5 text-sky-300" />
+                System Compatibility
+              </h3>
+
+              <RequirementRow label="Operating Systems" value="Windows & macOS" />
+              <RequirementRow label="Hardware" value="Most modern laptops & desktops" />
+              <RequirementRow label="Graphics" value="Integrated or dedicated GPU supported" />
+              <RequirementRow label="Download Size" value="90 MB" />
+              <RequirementRow label="Input" value="Keyboard & mouse (recommended) / Trackpad" />
             </div>
+
+            {/* Performance */}
             <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-              <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white"><Waves className="h-5 w-5 text-sky-300"/> Recommended</h3>
-              <RequirementRow label="CPU" value="Intel i7 / Ryzen 7 / Apple M2" />
-              <RequirementRow label="RAM" value="8 GB" />
-              <RequirementRow label="GPU" value="GTX 1660 / RX 6600 / Apple M2" />
-              <RequirementRow label="Storage" value="2 GB SSD space" />
-              <RequirementRow label="File Size" value="100 MB" />
+              <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
+                <Waves className="h-5 w-5 text-sky-300" />
+                Performance Notes
+              </h3>
+
+              <RequirementRow label="Target Experience" value="Smooth & responsive gameplay" />
+              <RequirementRow label="Optimization" value="Scales automatically to your system" />
+              <RequirementRow label="Multiplayer" value="Low bandwidth friendly" />
+              <RequirementRow label="Use Case" value="Casual & competitive play" />
+              <RequirementRow label="Setup Time" value="Under 2 minutes" />
             </div>
+
           </div>
         </Container>
       </section>
 
+
       {/* Roadmap */}
       <section className="relative py-16">
         <Container>
-          <SectionTitle eyebrow="Dev log" title="Roadmap to launch" subtitle="Expected release date: 12/31/2025" />
+          <SectionTitle eyebrow="Dev log" title="Roadmap to launch" subtitle="release date: 1/1/2026" />
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-3">
               <RoadmapItem done title="Core movement & camera" detail="Ship physics, camera follow, drift smoothing" />
@@ -409,7 +428,7 @@ export default function OverboardSite() {
       <section id="developer" className="relative py-20">
         <Container>
           <SectionTitle
-            eyebrow="Behind the Helm"
+            eyebrow="Behind the build"
             title="Get to Know the Developer"
             subtitle="OVERBOARD is an independent project built with a passion for multiplayer systems, gameplay feel, and clean design."
           />
