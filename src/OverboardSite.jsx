@@ -146,10 +146,14 @@ export default function OverboardSite() {
                   <Download className="h-5 w-5" /> Download for Windows
                 </a>
 
-               <div className="inline-flex items-center gap-2 rounded-2xl bg-white/5 px-5 py-3 font-semibold text-sky-200 ring-1 ring-white/10 cursor-not-allowed">
-                  <Download className="h-5 w-5 opacity-60" />
-                  macOS — Coming Jan 5
-                </div>
+                <a
+                  href="https://github.com/MUHARABI/overboard-site/releases/download/v1.02/OVERBOARD.zip"
+                  download
+                  className="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-5 py-3 font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/20"
+                >
+                  <Download className="h-5 w-5" /> Download for macOS
+                </a>
+
 
 
                 <a
@@ -267,13 +271,14 @@ export default function OverboardSite() {
               </div>
 
               {/* Coming soon notice */}
-              <div className="mt-4 rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">
-                <p className="text-sm text-sky-200">
-                  macOS build coming <span className="font-semibold text-white">January 5th</span>.
-                </p>
-                <p className="mt-1 text-xs text-sky-300/70">
-                  Currently finalizing notarization and cross-platform testing.
-                </p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <a
+                  href="https://github.com/MUHARABI/overboard-site/releases/download/v1.0.0/OVERBOARD_macOS.zip"
+                  download
+                  className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-4 py-2 font-semibold text-white shadow ring-1 ring-white/10 hover:brightness-110"
+                >
+                  <Download className="h-4 w-4" /> Download ZIP
+                </a>
               </div>
             </div>
 
@@ -322,7 +327,7 @@ export default function OverboardSite() {
                 <li>
                   On first launch, macOS may block the app:
                   <ul className="mt-2 ml-6 list-disc space-y-1">
-                    <li>Open <span className="font-semibold text-white">System Settings → Privacy & Security</span></li>
+                    <li>Open <span className="font-semibold text-white">System Settings → Privacy & Security  → Scroll Down to the Bottom</span></li>
                     <li>Click <span className="font-semibold text-white">Open Anyway</span></li>
                   </ul>
                 </li>
