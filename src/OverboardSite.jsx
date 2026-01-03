@@ -416,7 +416,7 @@ export default function OverboardSite() {
 
           <div className="mx-auto max-w-3xl rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
             <p className="text-center text-sky-100/80 mb-6">
-              Hi, I’m Muhammed Arabi, an up and coming software engineer and game developer focused on building polished multiplayer experiences across platforms.
+              Hi, I’m Muhammed Arabi, the solo developer behind OVERBOARD. With a background in software engineering and a love for video games, I set out to create an accessible yet deep multiplayer experience. From coding the networking layer to designing the ship mechanics, every aspect of OVERBOARD reflects my dedication to quality and fun. I’m excited to share OVERBOARD with you and hope you enjoy it as much as I enjoyed building it!
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -491,7 +491,7 @@ export default function OverboardSite() {
               </button>
 
               <p className="text-center text-xs text-sky-300/60">
-                (Feedback storage can be wired to a backend later)
+                (Feedback section will be wired soon)
               </p>
             </form>
           </div>
