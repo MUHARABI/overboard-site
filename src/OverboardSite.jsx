@@ -22,6 +22,10 @@ import {
 
 import logo from "./assets/logo.png";
 import trailer from "./assets/trailer.mp4";
+import { supabase } from "./supabase"
+import { useEffect } from "react"
+
+
 
 
 // Container wrapper
@@ -74,6 +78,8 @@ const OceanBackdrop = () => (
 
 
 
+
+
 // Feature card
 const Feature = ({ icon: Icon, title, text }) => (
   <div className="group rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 transition hover:bg-white/10">
@@ -112,6 +118,40 @@ const RoadmapItem = ({ done, title, detail }) => (
 export default function OverboardSite() {
   const [showTerms, setShowTerms] = useState(false);
   const [downloadUrl, setDownloadUrl] = useState("");
+
+  const [name, setName] = useState("")
+  const [message, setMessage] = useState("")
+  const [feedback, setFeedback] = useState([])
+  const [loading, setLoading] = useState(false)
+
+  const submitFeedback = async () => {
+    if (!message.trim()) return
+
+    setLoading(true)
+
+    await supabase.from("feedback").insert([
+      { name: name || "Anonymous", message }
+    ])
+
+    setName("")
+    setMessage("")
+    setLoading(false)
+
+    loadFeedback()
+  }
+
+  const loadFeedback = async () => {
+    const { data } = await supabase
+      .from("feedback")
+      .select("*")
+      .order("created_at", { ascending: false })
+
+    setFeedback(data || [])
+  }
+  useEffect(() => {
+    loadFeedback()
+  }, [])
+
 
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-transparent text-sky-100">
@@ -485,39 +525,73 @@ export default function OverboardSite() {
           <SectionTitle
             eyebrow="Community Voices"
             title="Player Feedback"
-            subtitle="Share your experience with OVERBOARD. Your feedback helps shape future updates."
+            subtitle="Share your experience with OVERBOARD. Feedback is public and helps guide future updates."
           />
 
           <div className="mx-auto max-w-2xl rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-            <form className="space-y-4">
+
+            {/* FEEDBACK FORM */}
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
+                submitFeedback()
+              }}
+              className="space-y-4"
+            >
               <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 type="text"
                 placeholder="Your name (optional)"
                 className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-sky-300/60 outline-none focus:border-sky-300/40"
               />
 
               <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 rows="4"
                 placeholder="What did you think of the game?"
                 className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-sky-300/60 outline-none focus:border-sky-300/40 resize-none"
               />
 
               <button
-                type="button"
-                className="w-full rounded-xl bg-sky-500 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/10 hover:brightness-110"
+                type="submit"
+                disabled={loading}
+                className="w-full rounded-xl bg-sky-500 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/10 hover:brightness-110 disabled:opacity-50"
               >
-                Submit Feedback
+                {loading ? "Submitting..." : "Submit Feedback"}
               </button>
-
-              <p className="text-center text-xs text-sky-300/60">
-                (Feedback section will be wired soon)
-              </p>
             </form>
+
+            {/* FEEDBACK LIST */}
+            <div className="mt-10 space-y-4">
+              {feedback.length === 0 && (
+                <p className="text-center text-sm text-sky-300/60">
+                  No feedback yet
+                </p>
+              )}
+
+              {feedback.map((item) => (
+                <div
+                  key={item.id}
+                  className="rounded-xl bg-white/5 p-4 ring-1 ring-white/10"
+                >
+                  <p className="text-sm font-semibold text-white">
+                    {item.name}
+                  </p>
+                  <p className="mt-1 text-sm text-sky-100/80">
+                    {item.message}
+                  </p>
+                </div>
+              ))}
+            </div>
+
           </div>
         </Container>
       </section>
 
 
+            
 
 
       {/* Footer */}
