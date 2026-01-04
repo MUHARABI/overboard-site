@@ -25,6 +25,15 @@ import trailer from "./assets/trailer.mp4";
 import { supabase } from "./supabase"
 import { useEffect } from "react"
 
+const formatDate = (timestamp) => {
+  return new Date(timestamp).toLocaleString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+};
 
 
 
@@ -574,12 +583,19 @@ export default function OverboardSite() {
               {feedback.map((item) => (
                 <div
                   key={item.id}
-                  className="rounded-xl bg-white/5 p-4 ring-1 ring-white/10"
+                  className="rounded-xl border border-white/10 bg-white/5 p-4"
                 >
-                  <p className="text-sm font-semibold text-white">
-                    {item.name}
-                  </p>
-                  <p className="mt-1 text-sm text-sky-100/80">
+                  <div className="flex items-center justify-between mb-1">
+                    <p className="text-sm font-semibold text-white">
+                      {item.name || "Anonymous"}
+                    </p>
+
+                    <p className="text-xs text-sky-300/60">
+                      {formatDate(item.created_at)}
+                    </p>
+                  </div>
+
+                  <p className="text-sm text-sky-100/80">
                     {item.message}
                   </p>
                 </div>
