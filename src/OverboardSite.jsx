@@ -214,13 +214,25 @@ export default function OverboardSite() {
 
 
 
-                <a
-                  href="#join"
-                  className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-semibold text-sky-200 ring-1 ring-white/20 transition hover:bg-white/10"
-                >
-                  <Anchor className="h-5 w-5" /> Join the crew
-                </a>
-              </div>
+                  <div className="flex gap-3">
+                    <a
+                      href="#developer"
+                      className="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-5 py-3 font-semibold text-white ring-1 ring-white/20 transition hover:bg-white/20"
+                    >
+                      <Info className="h-5 w-5" />
+                      Meet the Developer
+                    </a>
+
+                    <a
+                      href="#feedback"
+                      className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-semibold text-sky-200 ring-1 ring-sky-400/30 transition hover:bg-sky-400/10 hover:text-white"
+                    >
+                      <Mail className="h-5 w-5" />
+                      Leave Feedback
+                    </a>
+                  </div>
+
+                </div>
 
               
             </div>
