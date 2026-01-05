@@ -25,7 +25,7 @@ The website was designed to reflect the game’s atmosphere while remaining ligh
 - 💬 Public player feedback system (Supabase)
 - 👤 Developer profile & social links
 - 📱 Fully responsive design
-- 🔐 Terms & Conditions download confirmation modal
+- 🔐 Terms & Conditions download confirmation
 
 ---
 
