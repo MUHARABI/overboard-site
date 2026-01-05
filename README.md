@@ -1,16 +1,50 @@
-# React + Vite
+# OVERBOARD — Official Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for the official website of **OVERBOARD**, a cross-platform multiplayer naval combat game.
 
-Currently, two official plugins are available:
+The site serves as the public launch page for the game, providing downloads, trailers, system compatibility information, setup instructions, developer details, and a public feedback system for players.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌊 Live site:  
+https://muharabi.github.io/overboard-site/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚢 About OVERBOARD
 
-## Expanding the ESLint configuration
+**OVERBOARD** is a fast-paced online naval combat game where players command ships in last-captain-standing battles. The game emphasizes tight controls, tactical positioning, and satisfying cannon combat in short multiplayer matches.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The website was designed to reflect the game’s atmosphere while remaining lightweight, responsive, and accessible across devices.
+
+---
+
+## ✨ Website Features
+
+- 🎮 Windows & macOS game downloads (GitHub Releases)
+- 🎥 Embedded gameplay trailer
+- 📖 Step-by-step post-download setup guides
+- 💬 Public player feedback system (Supabase)
+- 👤 Developer profile & social links
+- 📱 Fully responsive design
+- 🔐 Terms & Conditions download confirmation modal
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React + Vite
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Backend (Feedback):** Supabase
+- **Hosting:** GitHub Pages
+
+---
+
+## 📂 Project Structure
+
+```txt
+src/
+ ├─ assets/          # Images & trailer
+ ├─ OverboardSite.jsx # Main site component
+ ├─ main.jsx
+ └─ index.css
