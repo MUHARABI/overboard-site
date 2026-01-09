@@ -4,12 +4,12 @@ This repository contains the source code for the official website of **OVERBOARD
 
 The site serves as the public launch page for the game, providing downloads, trailers, system compatibility information, setup instructions, developer details, and a public feedback system for players.
 
-🌊 Live site:  
+Live site:  
 https://muharabi.github.io/overboard-site/
 
 ---
 
-## 🚢 About OVERBOARD
+## About OVERBOARD
 
 **OVERBOARD** is a fast-paced online naval combat game where players command ships in last-captain-standing battles. The game emphasizes tight controls, tactical positioning, and satisfying cannon combat in short multiplayer matches.
 
@@ -17,19 +17,19 @@ The website was designed to reflect the game’s atmosphere while remaining ligh
 
 ---
 
-## ✨ Website Features
+## Website Features
 
-- 🎮 Windows & macOS game downloads (GitHub Releases)
-- 🎥 Embedded gameplay trailer
-- 📖 Step-by-step post-download setup guides
-- 💬 Public player feedback system (Supabase)
-- 👤 Developer profile & social links
-- 📱 Fully responsive design
-- 🔐 Terms & Conditions download confirmation
+- Windows & macOS game downloads (GitHub Releases)
+- Embedded gameplay trailer
+- Step-by-step post-download setup guides
+- Public player feedback system (Supabase)
+- Developer profile & social links
+- Fully responsive design
+- Terms & Conditions download confirmation
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend:** React + Vite
 - **Styling:** Tailwind CSS
@@ -40,7 +40,7 @@ The website was designed to reflect the game’s atmosphere while remaining ligh
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```txt
 src/
